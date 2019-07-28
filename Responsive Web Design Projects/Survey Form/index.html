@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+ <link rel="stylesheet" href="styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+ <style>
+* {
+  font:inherit;
+  font-family: Roboto;
+} 
+ </style>
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <main>
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <form id="survey-form">
+      <div class="row">
+        <div class="left">
+          <label id="name-label" for="name">* Name:</label>
+        </div>
+        <div class="right">
+          <input id="name" placeholder="Enter your name" class="input-field" required ></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label id="email-label" for="name">* Email:</label>
+        </div>
+        <div class="right">
+          <input id="email" placeholder="Enter your email" required type="email" class="input-field"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label id="number-label" for="number">* Age:</label>
+        </div>
+        <div class="right">
+          <input id="number" placeholder="Age" required type="number" min=1 max=100 class="input-field"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label for="dropdown">Which option best describes your current role?</label>
+        </div>
+        <div class="right">
+          <select id="dropdown">
+            <option disabled selected>Select an option</option>
+            <option>Student</option>
+            <option>Full Time Job</option>
+            <option>Full Time Learner</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label>* How likely is that you would recommend freeCodeCamp to a friend?</label>
+        </div>
+        <div class="right">
+          <ul style="list-style: none;">
+            <li><input type="radio" value=0 name="recommend" required>Definitely</input></li>
+            <li><input type="radio" value=1 name="recommend">Maybe</input></li>
+            <li><input type="radio" value=2 name="recommend">Not sure</input></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label for="likeFFC">* What do you like most in FCC:</label>
+        </div>
+        <div class="right">
+         <select id="likeFFC">
+            <option disabled selected>Select an option</option>
+            <option>Challenges</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>Open Source</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label >Things that should be improved in the future
+(Check all that apply):</label>
+        </div>
+        <div class="right">
+          <ul style="list-style: none;">
+            <li><input type="checkbox" name="improve" value=0>Front-end Projects</input></li>
+            <li><input type="checkbox" name="improve" value=1>Back-end Projects</input></li>
+            <li><input type="checkbox" name="improve" value=2>Data Visualization</input></li>
+            <li><input type="checkbox" name="improve" value=3>Challenges</input></li>
+            <li><input type="checkbox" name="improve" value=4>Open Source Community</input></li>
+            <li><input type="checkbox" name="improve" value=5>Gitter help rooms</input></li>
+            <li><input type="checkbox" name="improve" value=6>Videos</input></li>
+            <li><input type="checkbox" name="improve" value=7>City Meetups</input></li>
+            <li><input type="checkbox" name="improve" value=8>Wiki</input></li>
+            <li><input type="checkbox" name="improve" value=9>Forum</input></li>
+            <li><input type="checkbox" name="improve" value=10>Additional Courses</input></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label for="textarea" >Any Comments or Suggestions?</label>
+        </div>
+        <div class="right">
+          <textarea id="textarea" placeholder="Enter your comment here..." class="input-field"></textarea>
+        </div>
+      </div>
+      <input type="submit" value="Submit" id="submit"></input>
+    </form>
+  </main>
+</body>
+

@@ -1,0 +1,91 @@
+body {
+  text-align: center;
+  font-size: 16px;
+  background-color: #F0FFFF;
+}
+
+main {
+  max-width: 900px;
+  border-radius: 5px;
+  background-color: #FFFAFA;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.left > label {
+  padding: 10px;
+}
+
+textarea {
+  resize: vertical;
+  height: 60px;
+}
+
+ul {
+  text-align: left;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+li {
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.left {
+  flex: 0 50%;
+  text-align:right;
+}
+
+.right {
+  flex: 0 50%;
+  text-align: left;
+}
+
+select {
+  height: 40px;
+  width: 140px;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#submit {
+  height: 40px;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  color: white;
+  background-color: #1E90FF;
+}
+
+@media screen and (max-width: 800px){
+  .left {
+    flex: 0 100%;
+    text-align: center;
+  }
+
+.right {
+    flex: 0 100%;
+    text-align: center;
+  }
+  ul {
+     text-align: center;
+  }
+}
