@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+#navbar {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: #B22222;
+  width: 100%;
+  border-bottom: 1px solid black;
+  z-index: 999;
+}
+
+#navbar > ul > li {
+  float: right;
+  display: block;
+  padding: 10px 0;
+}
+
+li > a {
+  padding: 0 5vw;
+  color: white;
+}
+
+#navbar > ul > li:hover {
+  background-color: #3c7dc2;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #303841;
+}
+
+main {
+  padding-top: 50px;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#welcome-section > div > h1 {
+  color: white;
+  font-size: 60px;
+}
+
+#welcome-section > div > i {
+  color: red;
+  font-size: 30px;
+}
+
+#projects {
+  background-color: #4682B4;
+  padding-bottom: 15vh;
+}
+
+#projects > h2 {
+  color: white;
+  padding: 60px 0;
+  font-size: 46px;
+  text-decoration: underline;
+}
+
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+
+
+.container > a {
+  background-color: #303841;
+  color: white;
+}
+
+
+
+.container > a > img {
+  height: calc(100% - 5.4rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  padding: 40px;
+}
+
+#projects > a {
+  padding: 10px 40px;
+  color: white;
+  background-color: #303841;
+  border: 0;
+  transition: background-color 1s;
+}
+
+#projects > a:hover {
+  background-color: #B22222;
+  transition: background-color 1s;
+}
+
+#projects > a:hover > i {
+  transform: translateX(5px);
+  transition: transform 1s;
+}
+
+#projects > a > i {
+  transform: translateX(0px);
+  transition: transform 1s;
+}
+
+
+#info {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid red;
+}
+
+#info > h2 {
+  color: white;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+#info > i {
+  color: white;
+  font-size: 22px;
+  margin: 20px;
+}
+
+.infoItems > a {
+  color: white;
+  padding: 20px;
+  display: inline-block;
+  transform: translateY(0px);
+  transition: transform 0.3s ease-out;
+}
+
+.infoItems > a:hover {
+  transform: translateY(8px);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+}
+
+footer > p {
+  color: white;
+}
+footer > p > a{
+  color: white;
+}
