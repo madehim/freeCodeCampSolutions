@@ -1,0 +1,53 @@
+body {
+  background-color: red;
+  color: black;
+}
+
+#quote-box {
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #4d4d4d;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.change-text-color {
+}
+
+.btn {
+  display: inline;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  border: 0;
+  background-color: red;
+  color: white;
+}
+
+#new-quote {
+  float:right;
+}
+
+#buttons > a {
+  height: 15px;
+  width: 15px;
+  float: left;
+  margin-right: 10px;
+}
+
+#text > i {
+  font-size: 20px;
+}
+
+#text > span {
+  text-align: center;
+  font-size: 32px;
+}
+
+#author > p {
+  text-align: right;
+}
