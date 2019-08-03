@@ -1,0 +1,115 @@
+
+
+body {
+  background-color: #9d6ef9;
+}
+
+#editor-part {
+  width: 600px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin: 30px auto;
+}
+
+#editor {
+  resize: vertical;
+  min-height: 200px;
+  width: 98.8%; 
+  display: block;
+  padding-left: 5px;
+  background-color: #a08bf6;
+  border: none;
+  scrollbar-color: #7357e9 #a08bf6;
+  spellcheck: false;
+  outline:none;
+}
+
+#preview-part {
+  margin: 30px auto;
+  width: 800px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color:#a08bf6;
+}
+
+#preview {
+  width: auto;
+  padding-left: 5px;
+}
+
+
+.header {
+  position: relative;
+  padding: 5px;
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #8160e9;
+}
+
+
+@media screen and (max-width: 850px) {
+  #editor-part {
+    margin: 5px auto;
+  }
+  #preview-part {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #editor-part {
+    min-width: 200px;
+    max-width: 500px;
+  }
+  #preview-part {
+    min-width: 200px;
+    max-width: 500px;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8160e9; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7357e9; 
+}
+
+::-webkit-resizer {
+  border-radius: 2px;
+  background: #6a4ee1;
+}
+
+code {
+  display: block;
+  background-color: white;
+}
+
+blockquote {
+  background-color: red;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid orange;
+}
+
+td {
+  background: #d2d2d2;
+  text-align: center;
+  vertical-align: middle;
+}
