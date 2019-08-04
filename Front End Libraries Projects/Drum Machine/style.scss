@@ -1,0 +1,168 @@
+$color-text : black;
+$color-back-all: #a47c48;
+$color-back-body-stuff: #845422;
+$color-border: #ead61c;
+$color-control-stuff: #d7c797;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  background-color: $color-back-all;
+  color: $color-text;
+}
+
+html, body {
+  background-color: $color-back-body-stuff;
+}
+
+#drum-machine {
+  width: 650px;
+  height: auto; /* change to auto here*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid $color-border;
+  padding: 20px;
+  display: flex; 
+  
+  #drum-pad {
+    flex: 2 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    .drum-button {
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 5px black;
+      display: flex;
+      height: 100px;
+      width: 120px;
+      background-color: $color-back-body-stuff;
+      cursor: pointer;
+    }
+  }
+  
+  #option { 
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    #info {
+      background-color: $color-back-body-stuff;
+      border-radius: 2px;
+      display: flex;
+      width: 180px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+    
+    .volume-slider { 
+      width: 100%; /* Full-width */
+      height: 25px; /* Specified height */
+      input {
+        -webkit-appearance: none;  
+        appearance: none;
+        outline: none;
+        background-color: $color-back-body-stuff;
+        border: 1px solid black;
+        box-shadow: 0 0 5px black;
+        height: 5px;
+        width: 200px;
+      }
+      
+      input::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 10px; 
+        height: 25px; 
+        background: $color-control-stuff; 
+        cursor: pointer; 
+        border: 1px solid black;
+      }
+
+      input::-moz-range-thumb {
+        width: 10px; 
+        height: 25px; 
+        background: #4CAF50; 
+        cursor: pointer; 
+        border: 1px solid black;
+      }
+    }
+    
+    .control {
+      padding: 20px;
+      p {
+        font-size: 0.8em;
+      }
+      .select {
+        width: 70px;
+        height: 30px;
+        background-color: black;
+        border-radius: 1px;
+        padding: 5px;
+        display: flex;
+        .inner {
+          width: 30px;
+          height: 30px;
+          background-color: $color-control-stuff;
+          cursor: pointer; 
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {  
+  #drum-machine {
+    flex-direction: column;
+    padding: 10px;
+    width: 400px;
+    height: auto;
+    
+    #drum-pad {
+      .drum-button {
+        height: 80px;
+        width: 100px;
+        font-size: 0.9em;
+      }
+    }
+    
+    #option {
+      #info {
+      width: 120px;
+      height: 40px;
+      margin: 5px;
+    }
+      margin: 10px;
+      .control {
+      padding: 10px;
+      p {
+        font-size: 0.7em;
+      }
+      .select {
+        width: 50px;
+        height: 20px;
+        .inner {
+          width: 23px;
+          height: 19px;
+        }
+      }
+    }
+    }
+  }
+}
