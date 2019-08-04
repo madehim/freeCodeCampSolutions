@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  background-color: #a47c48;
+  color: black;
+}
+html, body {
+  background-color: #845422;
+}
+#drum-machine {
+  width: 650px;
+  height: auto;
+  /* change to auto here*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #ead61c;
+  padding: 20px;
+  display: flex;
+}
+#drum-machine #drum-pad {
+  flex: 2 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#drum-machine #drum-pad .drum-button {
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
+  display: flex;
+  height: 100px;
+  width: 120px;
+  background-color: #845422;
+  cursor: pointer;
+}
+#drum-machine #option {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#drum-machine #option #info {
+  background-color: #845422;
+  border-radius: 2px;
+  display: flex;
+  width: 180px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+#drum-machine #option .volume-slider {
+  width: 100%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+}
+#drum-machine #option .volume-slider input {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: #845422;
+  border: 1px solid black;
+  box-shadow: 0 0 5px black;
+  height: 5px;
+  width: 200px;
+}
+#drum-machine #option .volume-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #d7c797;
+  cursor: pointer;
+  border: 1px solid black;
+}
+#drum-machine #option .volume-slider input::-moz-range-thumb {
+  width: 10px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+  border: 1px solid black;
+}
+#drum-machine #option .control {
+  padding: 20px;
+}
+#drum-machine #option .control p {
+  font-size: 0.8em;
+}
+#drum-machine #option .control .select {
+  width: 70px;
+  height: 30px;
+  background-color: black;
+  border-radius: 1px;
+  padding: 5px;
+  display: flex;
+}
+#drum-machine #option .control .select .inner {
+  width: 30px;
+  height: 30px;
+  background-color: #d7c797;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  #drum-machine {
+    flex-direction: column;
+    padding: 10px;
+    width: 400px;
+    height: auto;
+  }
+  #drum-machine #drum-pad .drum-button {
+    height: 80px;
+    width: 100px;
+    font-size: 0.9em;
+  }
+  #drum-machine #option {
+    margin: 10px;
+  }
+  #drum-machine #option #info {
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+  }
+  #drum-machine #option .control {
+    padding: 10px;
+  }
+  #drum-machine #option .control p {
+    font-size: 0.7em;
+  }
+  #drum-machine #option .control .select {
+    width: 50px;
+    height: 20px;
+  }
+  #drum-machine #option .control .select .inner {
+    width: 23px;
+    height: 19px;
+  }
+}
