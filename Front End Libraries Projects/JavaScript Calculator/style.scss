@@ -1,0 +1,139 @@
+$color-blue: #6aacf8;
+$color-yellow: #ede111;
+$color-black: #383749;
+$color-white: #fff7f5;
+$back-color: #d9dade;
+$name-color: #98a0ad;
+$display-color: #ff0561;
+$back-display-color: #33111f;
+$animate-color: #502336;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+  background-color: $back-color;
+  color: $color-white;
+}
+html, body {
+  background-color: white;
+}
+
+#calc {
+  width: 450px;
+  height: auto;
+  border: 1px solid $color-black;
+  padding: 20px 10px 10px 10px;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  #display {
+    width: 100%;
+    div {
+      word-wrap: break-word;
+      cursor: default;
+      font-size: 1.6em;
+      text-align: right;
+      background-color: $back-display-color;
+      color: $display-color;
+      
+      animation-duration: 3s;
+      animation-name: backColorChange;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    @keyframes backColorChange {
+    from {
+      background-color: $back-display-color;
+    }
+    to {
+      background-color: $animate-color;
+    }
+}
+    
+  }
+  
+  #bottom-block {
+    width: 100%;
+    margin-top: 15px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+    #calc-name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px;
+      .button-for-look {
+        border: 1px solid black;
+        box-shadow: 3px 3px 5px 4px grey;
+        width: 40px;
+        height: 20px;
+        background-color: $color-black;
+        .inner {
+          cursor: pointer;
+          width: 50%;
+          height: 20px;
+          background-color: black;
+        }
+      }
+      p {
+        cursor: default;
+        font-size: 1.6em;
+        display:block;
+        height: 30px;
+        color: $name-color;
+        background-color: white;
+        border: 1px solid $color-black;
+      }
+    }
+    
+    #button-block {
+      display: flex;
+      flex-wrap:wrap;
+      align-items: center;
+      justify-content: space-between;
+      
+      button {
+        font-size: 1.8em;
+        outline: none;
+        border: none;
+        margin:5px;
+        height: 60px;
+      }
+      button:hover {
+        box-shadow: 5px 5px grey;
+      }
+      
+      #clear, #add {
+        width: 200px;
+        
+      }
+      #seven, #eight, #nine, #six, #five, #four, #three, #two, #one, #subtract, #divide, #multiply, #decimal {
+        width: 100px;
+      }
+      #zero, #equals {
+        width: 150px;
+      }
+      
+      
+      .yellow {
+        background-color: $color-yellow;
+      }
+      .blue {
+        background-color: $color-blue;
+      }
+      .black {
+        background-color: $color-black;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+  background-color: #d9dade;
+  color: #fff7f5;
+}
+html, body {
+  background-color: white;
+}
+#calc {
+  width: 450px;
+  height: auto;
+  border: 1px solid #383749;
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#calc #display {
+  width: 100%;
+}
+#calc #display div {
+  word-wrap: break-word;
+  cursor: default;
+  font-size: 1.6em;
+  text-align: right;
+  background-color: #33111f;
+  color: #ff0561;
+  animation-duration: 3s;
+  animation-name: backColorChange;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes backColorChange {
+  from {
+    background-color: #33111f;
+  }
+  to {
+    background-color: #502336;
+  }
+}
+#calc #bottom-block {
+  width: 100%;
+  margin-top: 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#calc #bottom-block #calc-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+#calc #bottom-block #calc-name .button-for-look {
+  border: 1px solid black;
+  box-shadow: 3px 3px 5px 4px grey;
+  width: 40px;
+  height: 20px;
+  background-color: #383749;
+}
+#calc #bottom-block #calc-name .button-for-look .inner {
+  cursor: pointer;
+  width: 50%;
+  height: 20px;
+  background-color: black;
+}
+#calc #bottom-block #calc-name p {
+  cursor: default;
+  font-size: 1.6em;
+  display: block;
+  height: 30px;
+  color: #98a0ad;
+  background-color: white;
+  border: 1px solid #383749;
+}
+#calc #bottom-block #button-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#calc #bottom-block #button-block button {
+  font-size: 1.8em;
+  outline: none;
+  border: none;
+  margin: 5px;
+  height: 60px;
+}
+#calc #bottom-block #button-block button:hover {
+  box-shadow: 5px 5px grey;
+}
+#calc #bottom-block #button-block #clear, #calc #bottom-block #button-block #add {
+  width: 200px;
+}
+#calc #bottom-block #button-block #seven, #calc #bottom-block #button-block #eight, #calc #bottom-block #button-block #nine, #calc #bottom-block #button-block #six, #calc #bottom-block #button-block #five, #calc #bottom-block #button-block #four, #calc #bottom-block #button-block #three, #calc #bottom-block #button-block #two, #calc #bottom-block #button-block #one, #calc #bottom-block #button-block #subtract, #calc #bottom-block #button-block #divide, #calc #bottom-block #button-block #multiply, #calc #bottom-block #button-block #decimal {
+  width: 100px;
+}
+#calc #bottom-block #button-block #zero, #calc #bottom-block #button-block #equals {
+  width: 150px;
+}
+#calc #bottom-block #button-block .yellow {
+  background-color: #ede111;
+}
+#calc #bottom-block #button-block .blue {
+  background-color: #6aacf8;
+}
+#calc #bottom-block #button-block .black {
+  background-color: #383749;
+}
