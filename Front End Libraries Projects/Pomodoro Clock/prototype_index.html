@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+@font-face{
+ font-family:'digital';
+ src: url(digital-7.regular.ttf);
+}
+</style>
+</head>
+
+
+
+<body>
+  <div id="clock">
+    <h1>Pomodoro Clock</h1>
+    <div id="length-part">
+      <div id="break-part">
+        <label id="break-label">Break Length</label>
+        <div id="break-length">
+          <button id="break-decrement"><i class="fa fa-arrow-down"></i></button>
+          5
+          <button id="break-increment"><i class="fa fa-arrow-up"></i></button>
+        </div>
+      </div>
+      <div id="session-part">
+        <label id="session-label">Session Length</label>
+        <div id="session-length">
+          <button id="session-decrement"><i class="fa fa-arrow-down"></i></button>
+          25
+          <button id="session-increment"><i class="fa fa-arrow-up"></i></button>
+        </div>
+      </div>
+    </div>
+    <div id="timer-part">
+      <label id="timer-label">Session</label>
+      <div id="time-left">25:00</div>
+      <audio id="beep"></audio>
+    </div>
+    <div id="timer-control">
+      <button id="start_stop">
+        <i class="fa fa-play"></i>
+        <i class="fa fa-pause"></i>
+      </button>
+      <button id="reset"><i class="fa fa-refresh"></i></button>
+    </div>
+  </div>
+</body>
+
+</html>
